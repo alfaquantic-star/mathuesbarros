@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Matheus Barros for Men | Moda masculina com estilo e personalidade</title>
+<meta name="description" content="MBFM, Matheus Barros for Men. Camisas, tênis e acessórios masculinos na Av. Simon Bolivar, 1235, Cidade Nobre.">
+<meta name="theme-color" content="#0e1113">
+<link rel="icon" href="img/logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0e1113;        /* carvão da logo */
+  --coal:#171b1e;
+  --slate:#262b2f;
+  --bronze:#b98a5e;     /* bronze do MB */
+  --bronze-hi:#e3bf9a;  /* brilho do metal */
+  --bronze-lo:#7a4d2c;  /* cobre da sombra */
+  --paper:#f1e7da;      /* marfim quente */
+  --mute:#a79b8d;
+  --metal:linear-gradient(120deg,#7a4d2c 0%,#c9996b 22%,#f0d2b0 45%,#b98a5e 62%,#e3bf9a 80%,#8a5a36 100%);
+  --sans:"Jost","Futura","Century Gothic",system-ui,sans-serif;
+  --serif:"Cormorant Garamond","Georgia",serif;
+  --ease:cubic-bezier(.2,.7,.2,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{background:var(--ink);color:var(--paper);font-family:var(--sans);font-weight:300;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img,video{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--bronze-hi);outline-offset:3px}
+body.lock{overflow:hidden}
+.wrap{width:min(1180px,92vw);margin-inline:auto}
+.metal{background:var(--metal);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:sheen 7s linear infinite}
+@keyframes sheen{to{background-position:-200% 0}}
+
+/* grão + brilho que segue o cursor */
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:90;opacity:.07;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.glow{position:fixed;width:520px;height:520px;left:0;top:0;margin:-260px 0 0 -260px;border-radius:50%;pointer-events:none;z-index:1;
+  background:radial-gradient(circle,rgba(185,138,94,.16),transparent 65%);transform:translate(50vw,30vh);transition:transform .35s var(--ease)}
+
+/* ---------- INTRO / HERO ---------- */
+.hero{position:relative;min-height:100svh;display:grid;place-items:center;padding:96px 0 64px;overflow:hidden;isolation:isolate}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;
+  background:radial-gradient(60% 50% at 50% 38%,rgba(185,138,94,.20),transparent 70%),radial-gradient(90% 60% at 50% 110%,#1d2226,transparent 70%)}
+.hero-inner{text-align:center;display:flex;flex-direction:column;align-items:center;gap:30px}
+.mark{position:relative;width:min(300px,64vw);aspect-ratio:1;perspective:900px}
+.mark-tilt{position:absolute;inset:0;transform-style:preserve-3d;transition:transform .25s var(--ease);animation:float 6s ease-in-out infinite}
+@keyframes float{50%{translate:0 -10px}}
+.mark img{position:absolute;inset:0;width:100%;height:100%;border-radius:50%;object-fit:cover;
+  box-shadow:0 30px 70px -20px rgba(0,0,0,.9),0 0 90px -10px rgba(185,138,94,.45);
+  opacity:0;transform:scale(.7) rotate(-25deg);filter:blur(14px);animation:coin 1.5s .55s var(--ease) forwards}
+@keyframes coin{to{opacity:1;transform:none;filter:none}}
+.mark svg{position:absolute;inset:-5%;width:110%;height:110%;transform:rotate(-90deg);overflow:visible}
+.mark svg circle{fill:none;stroke:url(#g);stroke-width:1.6;stroke-dasharray:1;stroke-dashoffset:1;animation:draw 1.8s .1s var(--ease) forwards;filter:drop-shadow(0 0 6px rgba(227,191,154,.7))}
+@keyframes draw{to{stroke-dashoffset:0}}
+/* reflexo girando no aro e varredura de luz nas letras */
+.mark .spin,.mark .sweep{position:absolute;inset:0;border-radius:50%;pointer-events:none;opacity:0;animation:fadein 1s 2s forwards}
+@keyframes fadein{to{opacity:1}}
+.mark .spin{background:conic-gradient(from 0deg,transparent 0 62%,rgba(255,238,215,.85) 74%,transparent 86%);
+  -webkit-mask:radial-gradient(circle,transparent 82.5%,#000 83.5%,#000 93%,transparent 94%);mask:radial-gradient(circle,transparent 82.5%,#000 83.5%,#000 93%,transparent 94%);
+  mix-blend-mode:overlay;animation:fadein 1s 2s forwards,rot 5s 2s linear infinite}
+@keyframes rot{to{transform:rotate(360deg)}}
+.mark .sweep{background:linear-gradient(105deg,transparent 40%,rgba(255,240,220,.38) 50%,transparent 60%);background-size:260% 100%;background-position:130% 0;
+  mix-blend-mode:soft-light;animation:fadein 1s 2s forwards,swipe 4.5s 2.4s ease-in-out infinite}
+@keyframes swipe{0%{background-position:130% 0}45%,100%{background-position:-30% 0}}
+
+.brand{font-weight:500;font-size:clamp(2rem,6.4vw,4.6rem);letter-spacing:.14em;line-height:1.05;min-height:1.1em;padding-left:.14em}
+.brand-for{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(1.8rem,4.6vw,3.2rem);letter-spacing:.04em;color:var(--bronze-hi);min-height:1.2em;margin-top:-6px}
+.caret{display:inline-block;width:.07em;height:.85em;margin-left:.08em;background:var(--bronze-hi);vertical-align:-.05em;animation:blink .8s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.tag{font-family:var(--serif);font-size:clamp(1.1rem,2.2vw,1.45rem);color:var(--mute);opacity:0;transform:translateY(10px);transition:all 1s var(--ease)}
+.tag.on,.cta-row.on{opacity:1;transform:none}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;opacity:0;transform:translateY(12px);transition:all 1s .15s var(--ease)}
+.btn{position:relative;display:inline-flex;align-items:center;gap:10px;padding:14px 26px;border-radius:999px;font-weight:500;font-size:.95rem;letter-spacing:.06em;overflow:hidden;transition:transform .3s var(--ease),box-shadow .3s}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-solid{background:var(--metal);background-size:200% 100%;color:#1a120b;animation:sheen 6s linear infinite reverse;box-shadow:0 10px 30px -10px rgba(185,138,94,.7)}
+.btn-solid:hover{transform:translateY(-3px);box-shadow:0 16px 36px -10px rgba(227,191,154,.8)}
+.btn-line{border:1px solid rgba(227,191,154,.45);color:var(--bronze-hi)}
+.btn-line:hover{background:rgba(185,138,94,.14);transform:translateY(-3px)}
+.scroll-hint{position:absolute;bottom:22px;left:50%;width:1px;height:46px;background:linear-gradient(var(--bronze-hi),transparent);transform-origin:top;animation:drip 2.2s ease-in-out infinite}
+@keyframes drip{0%{transform:scaleY(0)}60%{transform:scaleY(1);opacity:1}100%{transform:scaleY(1);opacity:0}}
+
+/* ---------- NAV ---------- */
+nav{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .4s,backdrop-filter .4s,transform .5s var(--ease),border-color .4s;border-bottom:1px solid transparent;transform:translateY(-100%)}
+nav.show{transform:none}
+nav.solid{background:rgba(14,17,19,.78);backdrop-filter:blur(14px);border-color:rgba(185,138,94,.18)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:66px}
+.logo-s{display:flex;align-items:center;gap:12px;font-weight:500;letter-spacing:.18em;font-size:.82rem}
+.logo-s img{width:38px;height:38px;border-radius:50%}
+.links{display:flex;gap:30px;font-size:.92rem;letter-spacing:.05em;color:var(--mute)}
+.links a{position:relative;padding:4px 0;transition:color .3s}
+.links a::after{content:"";position:absolute;left:0;bottom:0;height:1px;width:100%;background:var(--bronze-hi);transform:scaleX(0);transform-origin:right;transition:transform .4s var(--ease)}
+.links a:hover{color:var(--paper)}.links a:hover::after{transform:scaleX(1);transform-origin:left}
+.nav-ig{padding:9px 18px;font-size:.85rem}
+
+/* ---------- MARQUEE ---------- */
+.marquee{border-block:1px solid rgba(185,138,94,.22);background:var(--coal);overflow:hidden;padding:18px 0;position:relative;z-index:2}
+.track{display:flex;width:max-content;animation:slide 38s linear infinite}
+.marquee:hover .track{animation-play-state:paused}
+.track span{font-family:var(--serif);font-style:italic;font-size:clamp(1.4rem,3vw,2.1rem);padding-right:2.2rem;white-space:nowrap;display:flex;align-items:center;gap:2.2rem;color:var(--bronze-hi)}
+.track span::after{content:"";width:9px;height:9px;border:1px solid var(--bronze);border-radius:50%;flex:none}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* ---------- SEÇÕES ---------- */
+section{position:relative;z-index:2}
+.sec{padding:clamp(80px,12vw,150px) 0}
+h2{font-weight:400;font-size:clamp(2.2rem,5.4vw,4.2rem);letter-spacing:.04em;line-height:1.08}
+h2 em{font-family:var(--serif);font-weight:400;font-style:italic;color:var(--bronze-hi)}
+.lead{max-width:46ch;color:var(--mute);font-size:1.08rem;margin-top:18px}
+.head{margin-bottom:clamp(40px,7vw,90px)}
+.rv{opacity:0;transform:translateY(34px);transition:opacity .9s var(--ease),transform .9s var(--ease);transition-delay:var(--d,0s)}
+.rv.in{opacity:1;transform:none}
+
+/* ---------- CATÁLOGO ---------- */
+.item{display:grid;grid-template-columns:1.15fr 1fr;gap:clamp(28px,6vw,90px);align-items:center;margin-bottom:clamp(80px,12vw,160px)}
+.item:last-child{margin-bottom:0}
+.item.flip{grid-template-columns:1fr 1.15fr}
+.item.flip .collage{order:2}
+.collage{position:relative;aspect-ratio:1/1.02;cursor:zoom-in}
+.collage figure{position:absolute;overflow:hidden;border-radius:4px;box-shadow:0 30px 60px -25px #000;transition:transform .8s var(--ease),z-index 0s .4s}
+.collage figure::after{content:"";position:absolute;inset:0;border:1px solid rgba(227,191,154,.35);border-radius:4px;pointer-events:none}
+.collage img{width:100%;height:100%;object-fit:cover;transform:scale(1.08);transition:transform 1.2s var(--ease)}
+.collage figure:nth-child(1){inset:0 22% 18% 0;z-index:2}
+.collage figure:nth-child(2){inset:34% 0 0 38%;z-index:3;border:6px solid var(--ink)}
+.collage figure:nth-child(3){inset:6% 0 52% 62%;z-index:1}
+.collage:hover figure:nth-child(1){transform:translate(-10px,-8px) rotate(-1.4deg)}
+.collage:hover figure:nth-child(2){transform:translate(10px,10px) rotate(1.4deg)}
+.collage:hover figure:nth-child(3){transform:translate(12px,-10px) rotate(2deg)}
+.collage:hover img{transform:scale(1.14)}
+.item h3{font-weight:400;font-size:clamp(2rem,4vw,3.1rem);letter-spacing:.03em;line-height:1.1;margin-bottom:6px}
+.item h3 small{display:block;font-family:var(--serif);font-style:italic;font-size:.5em;color:var(--bronze-hi);margin-top:8px;letter-spacing:.02em}
+.item p{color:var(--mute);max-width:42ch;margin:18px 0 24px;font-size:1.05rem}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:30px;list-style:none}
+.chips li{display:flex;align-items:center;gap:8px;border:1px solid rgba(185,138,94,.3);border-radius:999px;padding:6px 14px;font-size:.88rem}
+.chips i{width:11px;height:11px;border-radius:50%;background:var(--c);box-shadow:inset 0 0 0 1px rgba(255,255,255,.25)}
+
+/* ---------- VÍDEOS ---------- */
+.videos{background:linear-gradient(var(--ink),var(--coal) 20%,var(--coal) 80%,var(--ink))}
+.vgrid{display:grid;grid-template-columns:1fr minmax(0,300px) minmax(0,300px);gap:clamp(24px,5vw,70px);align-items:center}
+.phone{position:relative;aspect-ratio:9/16;border-radius:30px;overflow:hidden;border:1px solid rgba(227,191,154,.4);box-shadow:0 40px 80px -30px #000,0 0 0 8px var(--ink),0 0 0 9px rgba(185,138,94,.3);cursor:pointer;background:#000}
+.phone:nth-child(3){margin-top:60px}
+.phone video{width:100%;height:100%;object-fit:cover}
+.phone .snd{position:absolute;right:12px;bottom:12px;width:42px;height:42px;border-radius:50%;background:rgba(14,17,19,.7);backdrop-filter:blur(8px);display:grid;place-items:center;border:1px solid rgba(227,191,154,.4);transition:transform .3s}
+.phone:hover .snd{transform:scale(1.1)}
+.snd svg{width:20px;height:20px;fill:none;stroke:var(--bronze-hi);stroke-width:1.8}
+.snd .on{display:none}.phone.sound .snd .on{display:block}.phone.sound .snd .off{display:none}
+
+/* ---------- CLIENTES ---------- */
+.rail{display:flex;gap:22px;overflow-x:auto;padding:10px 4vw 40px;scroll-snap-type:x mandatory;scrollbar-width:thin;scrollbar-color:var(--bronze-lo) transparent;cursor:grab}
+.rail.drag{cursor:grabbing;scroll-snap-type:none}
+.rail::before{content:"";flex:0 0 max(0px,calc((100vw - 1180px)/2 - 4vw))}
+.pol{flex:0 0 clamp(230px,26vw,320px);scroll-snap-align:center;background:var(--coal);padding:10px 10px 18px;border:1px solid rgba(185,138,94,.25);border-radius:4px;transform:rotate(var(--r,0deg));transition:transform .5s var(--ease),border-color .4s;user-select:none}
+.pol:hover{transform:rotate(0) translateY(-10px);border-color:var(--bronze)}
+.pol img{aspect-ratio:1;width:100%;object-fit:cover;pointer-events:none}
+.pol p{font-family:var(--serif);font-style:italic;font-size:1.2rem;color:var(--bronze-hi);margin-top:12px;text-align:center}
+
+/* ---------- LOJA ---------- */
+.store{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,6vw,90px);align-items:stretch}
+.card{border:1px solid rgba(185,138,94,.28);border-radius:6px;padding:clamp(26px,4vw,48px);background:linear-gradient(160deg,rgba(185,138,94,.08),transparent 60%),var(--coal);position:relative;overflow:hidden}
+.card::before{content:"";position:absolute;inset:-1px;border-radius:6px;padding:1px;background:conic-gradient(from var(--a,0deg),transparent 0 70%,var(--bronze-hi) 85%,transparent);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;animation:ang 8s linear infinite;pointer-events:none}
+@property --a{syntax:"<angle>";initial-value:0deg;inherits:false}
+@keyframes ang{to{--a:360deg}}
+.card h3{font-weight:400;font-size:1.5rem;letter-spacing:.04em;margin-bottom:22px}
+.row{display:flex;gap:16px;padding:18px 0;border-top:1px solid rgba(185,138,94,.2)}
+.row svg{width:24px;height:24px;flex:none;fill:none;stroke:var(--bronze-hi);stroke-width:1.4;margin-top:2px}
+.row b{font-weight:500;display:block}
+.row span{color:var(--mute)}
+.hours{width:100%;border-collapse:collapse;margin-top:2px}
+.hours td{padding:3px 0;color:var(--mute)}.hours td:last-child{text-align:right;color:var(--paper)}
+.hours tr.today td{color:var(--bronze-hi)}
+.status{display:inline-flex;align-items:center;gap:8px;font-size:.88rem;margin-top:10px}
+.status::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--dot,#777);box-shadow:0 0 0 0 var(--dot);animation:ping 2s infinite}
+@keyframes ping{70%{box-shadow:0 0 0 9px transparent}}
+.photo{position:relative;border-radius:6px;overflow:hidden;min-height:420px}
+.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.12)}
+.photo::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 55%,rgba(14,17,19,.92))}
+.photo p{position:absolute;left:26px;right:26px;bottom:24px;z-index:2;font-family:var(--serif);font-style:italic;font-size:1.6rem;line-height:1.25}
+
+/* ---------- RODAPÉ ---------- */
+.big{text-align:center;padding:clamp(80px,12vw,150px) 0 60px;position:relative;overflow:hidden}
+.big::before{content:"";position:absolute;left:50%;top:40%;width:80vw;height:80vw;max-width:900px;max-height:900px;translate:-50% -50%;background:radial-gradient(circle,rgba(185,138,94,.18),transparent 65%);z-index:-1}
+.big h2{max-width:16ch;margin:0 auto 34px}
+footer{border-top:1px solid rgba(185,138,94,.2);padding:26px 0;text-align:center;color:var(--mute);font-size:.85rem;position:relative;z-index:2}
+
+/* ---------- LIGHTBOX ---------- */
+.lb{position:fixed;inset:0;z-index:100;background:rgba(8,10,11,.94);display:none;place-items:center;backdrop-filter:blur(8px)}
+.lb.open{display:grid;animation:fadein .35s forwards;opacity:0}
+.lb img{max-height:86vh;max-width:90vw;border-radius:4px;animation:pop .5s var(--ease)}
+@keyframes pop{from{opacity:0;transform:scale(.92)}}
+.lb button{position:absolute;background:none;border:1px solid rgba(227,191,154,.4);color:var(--bronze-hi);width:48px;height:48px;border-radius:50%;font-size:1.4rem;cursor:pointer;transition:background .3s}
+.lb button:hover{background:rgba(185,138,94,.2)}
+.lb .x{top:20px;right:20px}.lb .p{left:20px;top:50%}.lb .n{right:20px;top:50%}
+
+@media (max-width:900px){
+  .links{display:none}
+  .item,.item.flip{grid-template-columns:1fr}.item.flip .collage{order:0}
+  .vgrid{grid-template-columns:1fr 1fr}.vgrid .head{grid-column:1/-1;margin-bottom:10px}.phone:nth-child(3){margin-top:30px}
+  .store{grid-template-columns:1fr}.photo{min-height:340px}
+}
+@media (max-width:520px){.logo-s span{display:none}.vgrid{gap:18px}.phone{border-radius:20px}}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  .rv{opacity:1;transform:none}.track{animation:none}
+}
+</style>
+</head>
+<body>
+<div class="glow" id="glow" aria-hidden="true"></div>
+
+<nav id="nav">
+  <div class="wrap nav-in">
+    <a href="#topo" class="logo-s" aria-label="Início"><img src="img/logo.jpg" alt=""><span>MBFM</span></a>
+    <div class="links">
+      <a href="#catalogo">Catálogo</a><a href="#videos">Vídeos</a><a href="#clientes">Clientes</a><a href="#loja">A loja</a>
+    </div>
+    <a class="btn btn-solid nav-ig" href="https://www.instagram.com/matheus_barros_for_men/" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r=".8" fill="currentColor"/></svg>
+      Instagram
+    </a>
+  </div>
+</nav>
+
+<header class="hero" id="topo">
+  <div class="wrap hero-inner">
+    <div class="mark" id="mark">
+      <svg viewBox="0 0 100 100" aria-hidden="true"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7a4d2c"/><stop offset=".5" stop-color="#f0d2b0"/><stop offset="1" stop-color="#b98a5e"/></linearGradient></defs><circle cx="50" cy="50" r="49" pathLength="1"/></svg>
+      <div class="mark-tilt" id="tilt">
+        <img src="img/logo.jpg" alt="Logo MB, Matheus Barros for Men" width="1024" height="1024">
+        <div class="spin"></div><div class="sweep"></div>
+      </div>
+    </div>
+    <div>
+      <h1 aria-label="Matheus Barros for Men">
+        <div class="brand" id="t1" aria-hidden="true"></div>
+        <div class="brand-for" id="t2" aria-hidden="true"></div>
+      </h1>
+    </div>
+    <p class="tag" id="tag">Moda masculina com estilo e personalidade.</p>
+    <div class="cta-row" id="cta">
+      <a class="btn btn-solid" href="#catalogo">Ver catálogo</a>
+      <a class="btn btn-line" href="https://www.instagram.com/matheus_barros_for_men/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r=".8" fill="currentColor"/></svg>
+        @matheus_barros_for_men
+      </a>
+    </div>
+  </div>
+  <div class="scroll-hint" aria-hidden="true"></div>
+</header>
+
+<div class="marquee" aria-hidden="true">
+  <div class="track" id="track"></div>
+</div>
+
+<main>
+<section class="sec" id="catalogo">
+  <div class="wrap">
+    <div class="head rv">
+      <h2>O que vestir <em>esta semana</em></h2>
+      <p class="lead">Peças que acabaram de chegar na loja. Toque nas fotos para ver de perto.</p>
+    </div>
+
+    <article class="item">
+      <div class="collage rv" data-gallery="camisa">
+        <figure><img src="img/camisa01.jpg" alt="Camisas texturizadas dobradas em caramelo, preto, branco, areia e verde" loading="lazy"></figure>
+        <figure><img src="img/camisa02.jpg" alt="Camisas texturizadas em branco, areia e verde" loading="lazy"></figure>
+        <figure><img src="img/camisa03.jpg" alt="Detalhe da textura da malha" loading="lazy"></figure>
+      </div>
+      <div class="rv" style="--d:.15s">
+        <h3>Camisa Texturizada<small>caimento que chama atenção</small></h3>
+        <p>Malha com textura e cores neutras que combinam entre si. Boa para o dia a dia, para o trabalho e para sair à noite.</p>
+        <ul class="chips" aria-label="Cores disponíveis">
+          <li><i style="--c:#8a5a36"></i>Caramelo</li><li><i style="--c:#15181b"></i>Preto</li><li><i style="--c:#f4f0e8"></i>Branco</li><li><i style="--c:#e3d6a8"></i>Areia</li><li><i style="--c:#3e5a3f"></i>Verde</li>
+        </ul>
+        <a class="btn btn-line" href="https://www.instagram.com/matheus_barros_for_men/" target="_blank" rel="noopener">Pedir pelo Instagram</a>
+      </div>
+    </article>
+
+    <article class="item flip">
+      <div class="collage rv" data-gallery="adidas">
+        <figure><img src="img/adidas01.jpg" alt="Tênis Adidas branco com três listras" loading="lazy"></figure>
+        <figure><img src="img/adidas02.jpg" alt="Tênis Adidas branco bico de concha" loading="lazy"></figure>
+        <figure><img src="img/adidas03.jpg" alt="Par de Adidas brancos" loading="lazy"></figure>
+      </div>
+      <div class="rv" style="--d:.15s">
+        <h3>Adidas Branco<small>perfeito, e combina com tudo</small></h3>
+        <p>O tênis branco que fecha qualquer look. Chegaram dois modelos: o clássico listrado e o bico de concha.</p>
+        <ul class="chips"><li>Listrado</li><li>Bico de concha</li><li>Todo branco</li></ul>
+        <a class="btn btn-line" href="https://www.instagram.com/matheus_barros_for_men/" target="_blank" rel="noopener">Pedir pelo Instagram</a>
+      </div>
+    </article>
+
+    <article class="item">
+      <div class="collage rv" data-gallery="fila">
+        <figure><img src="img/fila01.jpg" alt="Tênis Fila ACD areia" loading="lazy"></figure>
+        <figure><img src="img/fila02.jpg" alt="Detalhe da logo Fila no bico" loading="lazy"></figure>
+        <figure><img src="img/fila03.jpg" alt="Fila ACD com cadarço branco" loading="lazy"></figure>
+      </div>
+      <div class="rv" style="--d:.15s">
+        <h3>Fila ACD<small>leve, discreto, fácil de usar</small></h3>
+        <p>Tom areia, solado claro e detalhe preto. Um tênis para quem prefere o visual limpo e confortável.</p>
+        <ul class="chips"><li>Tom areia</li><li>Detalhe preto</li><li>Solado claro</li></ul>
+        <a class="btn btn-line" href="https://www.instagram.com/matheus_barros_for_men/" target="_blank" rel="noopener">Pedir pelo Instagram</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="sec videos" id="videos">
+  <div class="wrap vgrid">
+    <div class="head rv">
+      <h2>Direto <em>da loja</em></h2>
+      <p class="lead">Veja os tênis em movimento. Toque no vídeo para ligar o som.</p>
+    </div>
+    <div class="phone rv" data-v><video src="video/v1.mp4" poster="video/v1.jpg" muted loop playsinline preload="metadata"></video><div class="snd"><svg viewBox="0 0 24 24"><g class="off"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path d="M17 9l5 6M22 9l-5 6"/></g><g class="on"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path d="M16.5 8.5a5 5 0 010 7M19 6a8.5 8.5 0 010 12"/></g></svg></div></div>
+    <div class="phone rv" data-v style="--d:.15s"><video src="video/v2.mp4" poster="video/v2.jpg" muted loop playsinline preload="metadata"></video><div class="snd"><svg viewBox="0 0 24 24"><g class="off"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path d="M17 9l5 6M22 9l-5 6"/></g><g class="on"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path d="M16.5 8.5a5 5 0 010 7M19 6a8.5 8.5 0 010 12"/></g></svg></div></div>
+  </div>
+</section>
+
+<section class="sec" id="clientes" style="padding-bottom:40px">
+  <div class="wrap head rv">
+    <h2>Quem já <em>veste MB</em></h2>
+    <p class="lead">Clientes e amigos que passaram pela loja. Obrigado pela preferência.</p>
+  </div>
+  <div class="rail" id="rail">
+    <figure class="pol" style="--r:-2deg"><img src="img/cli-prestigiar.jpg" alt="Cliente com Matheus na loja" loading="lazy"><p>Obrigado pela preferência</p></figure>
+    <figure class="pol" style="--r:1.5deg"><img src="img/cli-nelio.jpg" alt="Matheus com o Sr. Nélio" loading="lazy"><p>Parceria consolidada</p></figure>
+    <figure class="pol" style="--r:-1deg"><img src="img/cli-amigos.jpg" alt="Matheus com casal de clientes" loading="lazy"><p>Valeu pela visita</p></figure>
+    <figure class="pol" style="--r:2deg"><img src="img/cli-caio.jpg" alt="Matheus com cliente de camisa preta" loading="lazy"><p>Presença e parceria</p></figure>
+    <figure class="pol" style="--r:-1.5deg"><img src="img/cli-theo.jpg" alt="Matheus com cliente de camisa do Flamengo" loading="lazy"><p>Sempre bem-vindo</p></figure>
+    <figure class="pol" style="--r:1deg"><img src="img/cli-muniz.jpg" alt="Matheus com cliente na loja" loading="lazy"><p>Grande amigo</p></figure>
+    <figure class="pol" style="--r:-2deg"><img src="img/cli-filipe.jpg" alt="Matheus com cliente de camisa verde" loading="lazy"><p>Obrigado, meu irmão</p></figure>
+  </div>
+</section>
+
+<section class="sec" id="loja">
+  <div class="wrap">
+    <div class="head rv">
+      <h2>Venha <em>nos visitar</em></h2>
+      <p class="lead">Atendimento de perto, peças para provar e um visual que combina com a sua personalidade.</p>
+    </div>
+    <div class="store">
+      <div class="card rv">
+        <h3>MBFM | Matheus Barros For Men</h3>
+        <div class="row">
+          <svg viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11.5A7 7 0 005 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+          <div><b>Endereço</b><span>Av. Simon Bolívar, 1235<br>Cidade Nobre</span><br>
+          <a href="https://www.google.com/maps/search/?api=1&query=Av+Simon+Bolivar+1235+Cidade+Nobre+Ipatinga" target="_blank" rel="noopener" style="color:var(--bronze-hi);text-decoration:underline;text-underline-offset:4px">Abrir no mapa</a></div>
+        </div>
+        <div class="row">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          <div style="flex:1"><b>Horário</b>
+            <table class="hours" id="hours"><tr data-d="1,2,3,4,5"><td>Segunda a sexta</td><td>9h às 19h</td></tr><tr data-d="6"><td>Sábado</td><td>9h às 18h</td></tr><tr data-d="0"><td>Domingo</td><td>Fechado</td></tr></table>
+            <div class="status" id="status"></div>
+          </div>
+        </div>
+        <div class="row" style="padding-bottom:0">
+          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></svg>
+          <div><b>Instagram</b><a href="https://www.instagram.com/matheus_barros_for_men/" target="_blank" rel="noopener" style="color:var(--bronze-hi)">@matheus_barros_for_men</a></div>
+        </div>
+      </div>
+      <div class="photo rv" style="--d:.15s">
+        <img src="img/cli-amigos.jpg" alt="Interior da loja com parede de tênis e bonés" loading="lazy" style="object-position:50% 20%">
+        <p>Tênis, bonés e camisas escolhidos para quem se veste com atitude.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="big">
+  <div class="wrap">
+    <h2 class="rv">Estilo tem <em>endereço.</em></h2>
+    <div class="cta-row rv" style="opacity:1;transform:none">
+      <a class="btn btn-solid" href="https://www.instagram.com/matheus_barros_for_men/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r=".8" fill="currentColor"/></svg>
+        Seguir no Instagram
+      </a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>© <span id="yr"></span> MBFM | Matheus Barros For Men. Av. Simon Bolívar, 1235, Cidade Nobre.</footer>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Galeria">
+  <button class="x" aria-label="Fechar">×</button><button class="p" aria-label="Anterior">‹</button>
+  <img id="lbimg" alt=""><button class="n" aria-label="Próxima">›</button>
+</div>
+
+<script>
+const $=(s,c=document)=>c.querySelector(s),$$=(s,c=document)=>[...c.querySelectorAll(s)];
+const reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+const sleep=ms=>new Promise(r=>setTimeout(r,ms));
+
+/* digitação do nome, letra por letra */
+async function type(el,text,speed){
+  const c=document.createElement('span');c.className='caret';
+  el.textContent='';el.append(c);
+  for(const ch of text){c.before(ch);await sleep(reduce?0:speed+Math.random()*45)}
+}
+(async()=>{
+  const t1=$('#t1'),t2=$('#t2');
+  await sleep(reduce?0:2000);                // espera a logo se desenhar
+  await type(t1,'MATHEUS BARROS',85);
+  const c1=$('.caret',t1);c1.remove();
+  await sleep(reduce?0:180);
+  await type(t2,'for Men',110);
+  await sleep(reduce?0:500);
+  $('#tag').classList.add('on');$('#cta').classList.add('on');
+  $('#nav').classList.add('show');
+})();
+if(reduce)$('#nav').classList.add('show');
+
+/* letreiro */
+const words=['Moda masculina','Estilo','Personalidade','Camisas','Tênis','Matheus Barros for Men'];
+$('#track').innerHTML=[...words,...words,...words,...words].map(w=>`<span>${w}</span>`).join('');
+
+/* nav */
+addEventListener('scroll',()=>$('#nav').classList.toggle('solid',scrollY>40),{passive:true});
+
+/* brilho do cursor */
+addEventListener('pointermove',e=>{$('#glow').style.transform=`translate(${e.clientX}px,${e.clientY}px)`},{passive:true});
+
+/* logo reage ao mouse */
+const mark=$('#mark'),tilt=$('#tilt');
+mark.addEventListener('pointermove',e=>{const r=mark.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;tilt.style.transform=`rotateY(${x*26}deg) rotateX(${-y*26}deg)`});
+mark.addEventListener('pointerleave',()=>tilt.style.transform='');
+
+/* aparecer ao rolar */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15});
+$$('.rv').forEach(el=>io.observe(el));
+
+/* parallax suave nas fotos */
+const par=$$('.collage figure img,.photo img');
+function onScroll(){if(reduce)return;const h=innerHeight;par.forEach(img=>{const r=img.parentElement.getBoundingClientRect();if(r.bottom<0||r.top>h)return;const p=(r.top+r.height/2-h/2)/h;img.style.transform=`translateY(${p*-28}px) scale(1.14)`})}
+addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+/* vídeos: tocam quando visíveis, som ao tocar */
+const vio=new IntersectionObserver(es=>es.forEach(e=>{const v=$('video',e.target);e.isIntersecting?v.play().catch(()=>{}):v.pause()}),{threshold:.5});
+$$('[data-v]').forEach(p=>{
+  vio.observe(p);
+  p.addEventListener('click',()=>{const v=$('video',p);v.muted=!v.muted;p.classList.toggle('sound',!v.muted);
+    $$('[data-v]').forEach(o=>{if(o!==p){$('video',o).muted=true;o.classList.remove('sound')}})});
+});
+
+/* arrastar o carrossel de clientes */
+const rail=$('#rail');let down=false,sx=0,sl=0;
+rail.addEventListener('pointerdown',e=>{if(e.pointerType!=='mouse')return;down=true;sx=e.clientX;sl=rail.scrollLeft;rail.classList.add('drag')});
+addEventListener('pointerup',()=>{down=false;rail.classList.remove('drag')});
+addEventListener('pointermove',e=>{if(down)rail.scrollLeft=sl-(e.clientX-sx)});
+
+/* horário: destaca o dia e mostra se está aberto (fuso de Brasília) */
+(function(){
+  const now=new Date(new Date().toLocaleString('en-US',{timeZone:'America/Sao_Paulo'}));
+  const d=now.getDay(),h=now.getHours()+now.getMinutes()/60;
+  $$('#hours tr').forEach(r=>{if(r.dataset.d.split(',').includes(String(d)))r.classList.add('today')});
+  const close=d===0?0:d===6?18:19,open=d===0?0:9;
+  const st=$('#status');
+  const isOpen=h>=open&&h<close&&d!==0;
+  st.style.setProperty('--dot',isOpen?'#6fcf8d':'#c46a5a');
+  st.textContent=isOpen?`Aberto agora, fecha às ${close}h`:'Fechado agora';
+})();
+$('#yr').textContent=new Date().getFullYear();
+
+/* galeria */
+const gal={camisa:['camisa01','camisa02','camisa03'],adidas:['adidas01','adidas02','adidas03'],fila:['fila01','fila02','fila03']};
+let cur=[],idx=0;const lb=$('#lb'),lbimg=$('#lbimg');
+function show(){lbimg.style.animation='none';lbimg.offsetHeight;lbimg.style.animation='';lbimg.src=`img/${cur[idx]}.jpg`}
+function openLB(k,i){cur=gal[k];idx=i;show();lb.classList.add('open');document.body.classList.add('lock')}
+function closeLB(){lb.classList.remove('open');document.body.classList.remove('lock')}
+$$('.collage').forEach(c=>$$('figure',c).forEach((f,i)=>f.addEventListener('click',()=>openLB(c.dataset.gallery,i))));
+$('.x',lb).onclick=closeLB;
+$('.p',lb).onclick=()=>{idx=(idx+cur.length-1)%cur.length;show()};
+$('.n',lb).onclick=()=>{idx=(idx+1)%cur.length;show()};
+lb.addEventListener('click',e=>{if(e.target===lb)closeLB()});
+addEventListener('keydown',e=>{if(!lb.classList.contains('open'))return;if(e.key==='Escape')closeLB();if(e.key==='ArrowLeft')$('.p',lb).click();if(e.key==='ArrowRight')$('.n',lb).click()});
+</script>
+</body>
+</html>
